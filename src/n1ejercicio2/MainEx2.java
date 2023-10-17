@@ -1,9 +1,14 @@
-package n1ejercicio1;
+package n1ejercicio2;
 
 import java.util.ArrayList;
 
-public class MainEx1 {
+import n1ejercicio1.OnLineWorker;
+import n1ejercicio1.OnSiteWorker;
+import n1ejercicio1.Worker;
 
+public class MainEx2 {
+
+	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
 		double hours = 176;
 		ArrayList<Worker> workers = new ArrayList<Worker>();
@@ -21,9 +26,11 @@ public class MainEx1 {
 			if ((worker instanceof OnSiteWorker)) {
 				System.out.println("Nombre: " + worker.getName() + ", apellido: " + worker.getSurName()
 						+ ", salario mensual: " + worker.calculateSalary(hours) + ". Trabajador presencial.");
+				((OnSiteWorker) worker).obsoleteOnSite();
 			} else if ((worker instanceof OnLineWorker)) {
 				System.out.println("Nombre: " + worker.getName() + ", apellido: " + worker.getSurName()
 						+ ", salario mensual: " + worker.calculateSalary(hours) + ". Trabajador OnLine.");
+				((OnLineWorker) worker).obsoleteOnLine();
 			}
 		}
 

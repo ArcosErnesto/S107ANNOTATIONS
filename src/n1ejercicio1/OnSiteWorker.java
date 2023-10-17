@@ -24,4 +24,9 @@ public class OnSiteWorker extends Worker {
 		return salary;
 	}
 
+	@Deprecated
+	public void obsoleteOnSite() {
+		System.out.println("Este método está obsoleto para 'OnSiteWorker'");
+	}
+
 }

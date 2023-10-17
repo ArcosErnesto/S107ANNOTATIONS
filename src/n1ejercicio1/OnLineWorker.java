@@ -20,4 +20,9 @@ public class OnLineWorker extends Worker {
 		return salary;
 	}
 
+	@Deprecated
+	public void obsoleteOnLine() {
+		System.out.println("Este método está obsoleto para 'OnLineWorker'");
+	}
+
 }
