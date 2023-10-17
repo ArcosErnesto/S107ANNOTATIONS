@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class MainEx1 {
 
+	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
 		double hours = 176;
 		ArrayList<Worker> workers = new ArrayList<Worker>();
